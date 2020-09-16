@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: 99 Little Bugs In The Code
+subtitle: 'Developer Rants, Tutorials, Gotchas'
+description: 'Yet Another Developer Blog'
 keywords:
-author: John Doe
+author: Samuel Gonsalves
 language: en
 timezone: ''
 
