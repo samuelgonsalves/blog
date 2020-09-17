@@ -5,8 +5,8 @@
 # Site
 title: 99 Little Bugs In The Code
 subtitle: 'Developer Rants, Tutorials, Gotchas'
-description: 'Yet Another Developer Blog'
-keywords:
+description: 'Tutorials and coding tidbits focused on C# & .NET development'
+keywords: C#, .NET
 author: Samuel Gonsalves
 language: en
 timezone: ''
