@@ -6,16 +6,24 @@ In this article, I'll walk you through building custom Alexa skills using C# and
 
 ### Basics
 
-The Alexa developer console allows you to setup a skill and acts as the user facing piece of your Alexa skill. 
-The skill invokes an AWS lambda to respond to requests.
+The Alexa developer console allows you to setup a skill and acts as the user facing portion of your Alexa skill. 
+The skill invokes an AWS lambda to respond to user requests.
 The Alexa skill interacts with the AWS lambda function, passing information back and forth.
+
+{% asset_img alexa-visual.png Alexa Skill Flow %}
+
+In the illustration above:
+Assuming the user has already invoked the skill (by saying something like "Alexa, open weather predictor"), a user then asks the skill what's the weather in a city.
+Alexa then identifies what user defined intents correspond to the phrase, in this case GetWeatherIntent and slots (if applicable) like San Francisco.
+It sends a request to an AWS lambda function that can respond to it. The function can call an external API to get the temperature in San Francisco and then respond to the user.
+
 
 ### Alexa Developer Console
 
 In the Alexa developer console, you can create a new skill.
-While in the console, it's useful to understand what Intents, Utterances and Slots are as they form the basis of your skill.
+It's useful to understand what the terms- Intents, Utterances and Slots mean as they form the basis of your skill.
 **Intents:** Simply put, intents are commands that Alexa can understand. Intents that you create are custom intents, and Amazon has built-in intents as well.
-**Slots:** Slots are parts of an intent that get mapped to a slot value that can be used in code.
+**Slots:** Slots are parts of an intent that get mapped to a slot value that can be used in your AWS lambda.
 **Utterances:** These are phrases that you can use to invoke an intent.
 
 Let's break this up with an example.
@@ -70,3 +78,6 @@ In the Alexa Developer Console, you'll want to specify the endpoint to the AWS l
 The Alexa Developer Console allows you to test your Alexa skill by specifying the utterance.
 You'll also need to give your skill an Invocation name.
 
+### Conclusion
+
+You can do a lot more with Alexa skills like Alexa Conversations and hopefully this lowers the barrier to Alexa skill development in .NET.
